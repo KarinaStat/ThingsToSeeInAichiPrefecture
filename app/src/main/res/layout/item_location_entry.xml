@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/text_view_heading"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:textColor="#272727"
+        android:layout_height="wrap_content"
+        tools:text="1.Location"
+        android:layout_toLeftOf="@id/card_view_image_container" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/card_view_image_container"
+        tools:text="This will be a description. Doing a long one so we can see how it looks on very very very very very long lines."
+        android:id="@+id/text_view_description"
+        android:layout_below="@id/text_view_heading"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/card_view_image_container" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_alignBottom="@id/card_view_image_container"
+        tools:rating="3.5f"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_image_container"
+        android:layout_width="160dp"
+        app:cardCornerRadius="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/image_view_item_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient_background"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
